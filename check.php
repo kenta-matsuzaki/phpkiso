@@ -12,15 +12,23 @@ $email = $_POST['email'];
 $goiken = $_POST['goiken'];
 if($nickname === '' || $email === '' || $goiken === ''){
   print '全て入力してください'.'<br/>'.'<br/>';
+  print '<form method="post" action="thanks.php">
+          <input type="button" onclick="history.back()" value="戻る">
+         </form>';
 }
 else {
   print 'ようこそ'.'<br/>';
   print "{$nickname}様".'<br/>';
   print "メールアドレス: {$email}".'<br/>';
   print "ご意見「{$goiken}」".'<br/>'.'<br/>';
+  print '<form method="post" action="thanks.php">
+          <input type="button" onclick="history.back()" value="戻る">
+          <input type="submit" value="OK">
+         </form>';
 }
 
-print '<form><input type="button" onclick="history.back()" value="戻る"></form>';
+
+
 ?>
 
 </body>
