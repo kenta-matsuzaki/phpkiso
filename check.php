@@ -10,6 +10,11 @@
 $nickname = $_POST['nickname'];
 $email = $_POST['email'];
 $goiken = $_POST['goiken'];
+
+$nickname = htmlspecialchars($nickname);
+$email = htmlspecialchars($email);
+$goiken = htmlspecialchars($goiken);
+
 if($nickname === '' || $email === '' || $goiken === ''){
   print '全て入力してください'.'<br/>'.'<br/>';
   print '<form method="post" action="thanks.php">
