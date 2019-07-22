@@ -6,9 +6,21 @@
 </head>
 <body>
 
-<?php print 'ようこそ';
-print $_POST['nickname'];
-print '様'
+<?php
+$nickname = $_POST['nickname'];
+$email = $_POST['email'];
+$goiken = $_POST['goiken'];
+if($nickname === '' || $email === '' || $goiken === ''){
+  print '全て入力してください'.'<br/>'.'<br/>';
+}
+else {
+  print 'ようこそ'.'<br/>';
+  print "{$nickname}様".'<br/>';
+  print "メールアドレス: {$email}".'<br/>';
+  print "ご意見「{$goiken}」".'<br/>'.'<br/>';
+}
+
+print '<form><input type="button" onclick="history.back()" value="戻る"></form>';
 ?>
 
 </body>
