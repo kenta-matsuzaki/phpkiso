@@ -22,6 +22,9 @@ else {
   print "メールアドレス: {$email}".'<br/>';
   print "ご意見「{$goiken}」".'<br/>'.'<br/>';
   print '<form method="post" action="thanks.php">
+          <input name="nickname" type="hidden" value="'.$nickname.'">
+          <input name="email" type="hidden" value="'.$email.'">
+          <input name="goiken" type="hidden" value="'.$goiken.'">
           <input type="button" onclick="history.back()" value="戻る">
           <input type="submit" value="OK">
          </form>';
